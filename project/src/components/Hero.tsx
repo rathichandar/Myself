@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
+import { getAssetPath } from '../utils/assetPath';
 
 const Hero = () => {
   return (
@@ -37,7 +38,7 @@ const Hero = () => {
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-100 dark:border-indigo-900 shadow-xl">
               <img
-                src="/assets/images/profile.jpg"
+                src={getAssetPath('/assets/images/profile.jpg')}
                 alt="Chandar Rathi"
                 className="w-full h-full object-cover"
               />

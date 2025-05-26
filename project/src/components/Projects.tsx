@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github, X, FileImage } from 'lucide-react';
+import { getAssetPath } from '../utils/assetPath';
 
 interface Project {
   id: number;
@@ -143,7 +144,7 @@ const Projects = () => {
         'Created modern UI with Svelte and RESTful API with FastAPI',
         'Developed comprehensive testing and staging environments'
       ],
-      architectureDiagram: '/assets/diagrams/election-system-architecture.png'
+      architectureDiagram: getAssetPath('/assets/diagrams/election-system-architecture.png')
     }
   ];
 

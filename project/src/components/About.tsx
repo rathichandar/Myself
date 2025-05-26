@@ -1,5 +1,6 @@
 import React from 'react';
 import { FileDown } from 'lucide-react';
+import { getAssetPath } from '../utils/assetPath';
 
 const About = () => {
   return (
@@ -54,7 +55,7 @@ const About = () => {
             </div>
 
             <a
-              href="/assets/docs/resume.pdf"
+              href={getAssetPath('/assets/docs/resume.pdf')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow-md hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 transition-colors"

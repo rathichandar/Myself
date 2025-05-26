@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Menu, X, FileText, Sun, Moon } from 'lucide-react';
+import { getAssetPath } from '../utils/assetPath';
 
 interface NavbarProps {
   activeSection: string;
@@ -102,7 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, darkMode, setDarkMode })
             
             {/* Resume Link */}
             <a
-              href="/assets/docs/resume.pdf"
+              href={getAssetPath('/assets/docs/resume.pdf')}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 transition-colors"
@@ -175,7 +176,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, darkMode, setDarkMode })
           
           {/* Resume Link - Mobile */}
           <a
-            href="/assets/docs/resume.pdf"
+            href={getAssetPath('/assets/docs/resume.pdf')}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center px-3 py-2 text-base font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
